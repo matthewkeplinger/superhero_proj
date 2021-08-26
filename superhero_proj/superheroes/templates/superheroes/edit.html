@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name-"viewport" content="width=device-width, intial-scale=1.0">
+    <link rel="stylesheet" href= "https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/darkly/bootstrap.min.css">
     <title>Update Hero</title>
 </head>
 <body>
@@ -16,6 +17,7 @@
         Catchphrase: <input type = "text" name = "catchphrase" id="catchphrase"value = "{{updated_hero.catch_phrase}}"><br /><br><br>
         <input type = "submit" value="Save Changes">
     </form>
-    <a href = "{% url 'superheroes:index' %}">Return to Hero List</a>
+    <br>
+   <h3> <a href = "{% url 'superheroes:index' %}">Return without making changes</a></h3>
 </body>
 </html>

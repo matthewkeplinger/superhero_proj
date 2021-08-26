@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name-"viewport" content="width=device-width, intial-scale=1.0">
+    <link rel="stylesheet" href= "https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/darkly/bootstrap.min.css">
     <title>Superhero Index</title>
 </head>
 
 <body>
-    <h1> Superhero Detail</h1>
+    <br><br><br>
+    <h2> <u>Superhero Detail</u></h2>
     <ul>
-        <li><h2>Hero Name: {{single_hero.name}}</h2></li>
+        <li><h3>Hero Name: {{single_hero.name}}</h3></li>
         <li><h3>Alter Ego: {{single_hero.alter_ego}}</h3></li>
         <li><h3>Hero Catch Phrase:<i> "{{single_hero.catch_phrase}}"</i></h2></li>     
         <li><h3>Primary Ability: {{single_hero.primary_ability}}</h3></li>
         <li><h3>Secondary Ability: {{single_hero.secondary_ability}}</h3></li>
     </ul>  
-    <a href = "{% url 'superheroes:index' %}">Return to Hero List</a>
+    <br>
+    <h3><a href = "{% url 'superheroes:index' %}">Return to Hero List</a></h3>
 </body>
 
 </html>

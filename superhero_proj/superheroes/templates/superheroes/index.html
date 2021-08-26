@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+{% load static %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name-"viewport" content="width=device-width, intial-scale=1.0">
+    <link rel="stylesheet" href= "https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/darkly/bootstrap.min.css">
     <title>Superhero Index</title>
 </head>
 <body>
     <h1> List of Heroes</h1>
     <ul>
         {% for hero in all_heroes %}
-        <table>
+        <table width=50% >
             <tr>
-                <td><li><h2>{{hero.name}}</h2></li></td>
-                <td><h3><a href = "{% url 'superheroes:detail' hero.id %}">Click for Details</a></h3></td>
-                <td><h3><a href = "{% url 'superheroes:edit' hero.id %}">Edit Hero</a></h3></td>
-                <td><h3><a href = "{% url 'superheroes:delete' hero.id %}">Delete Hero</a></h3></td>
+                <td style="width:25%"><li><h3>{{hero.name}}</h3></li></td>
+                <td style="width:15%"><h5><a href = "{% url 'superheroes:detail' hero.id %}">Click for Details</a></h5></td>
+                <td style="width:10%"><h5><a href = "{% url 'superheroes:edit' hero.id %}">Edit Hero</a></h5></td>
+                <td style="width:10%"><h5><a href = "{% url 'superheroes:delete' hero.id %}">Delete Hero</a></h5></td>
            </tr>           
         </table>
         {% endfor %}
     </ul>
-    <a href = "{% url 'superheroes:create' %}">Add a new Hero</a>    
+    <img src = "{% static 'greenarrow.png' %}" alt="Oliver Queen" style="width:10%">
+    <h3><a href = "{% url 'superheroes:create' %}">Add a new Hero</a></h3>
 </body>
 </html>
