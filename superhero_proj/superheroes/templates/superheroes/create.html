@@ -10,11 +10,14 @@
 <body>
    <form action="{% url 'superheroes:create' %}" method="post">
         {% csrf_token %}
-        Name: <input type = "text" name = "name" id="name"><br />
-        Alter Ego: <input type = "text" name = "alter_ego" id="alter_ego"><br />
-        Primary Ability: <input type = "text" name = "primary" id="primary"><br />
-        Secondary Ability: <input type = "text" name = "secondary" id="secondary"><br />
-        Catchphrase: <input type = "text" name = "catchphrase" id="catchphrase"><br />
+        <table>
+            <tr><td style = "width:45%">Name: </td><td><input type = "text" name = "name" id="name"></td></tr>
+            <tr><td>Alter Ego: </td><td><input type = "text" name = "alter_ego" id="alter_ego"></td></tr>
+            <tr><td>Primary Ability: </td><td> <input type = "text" name = "primary" id="primary"></td></tr>
+            <tr><td>Secondary Ability: </td><td><input type = "text" name = "secondary" id="secondary"></td></tr>
+            <tr><td>Catchphrase: </td><td><input type = "text" name = "catchphrase" id="catchphrase"></td></tr>
+        </table>
+        </br>
         <input type = "submit" value="Add!">
     </form>
 </body>
